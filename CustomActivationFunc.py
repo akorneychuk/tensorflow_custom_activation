@@ -56,7 +56,7 @@ def py_func(func, inp, Tout, name=None, grad=None):
 
 
 def tf_leaky_relu(x,name=None):
-    with ops.name_scope(name, "d_spiky", [x]) as name:
+    with ops.name_scope(name, "leaky_relu", [x]) as name:
         y = py_func(np_leaky_relu_32,  # forward pass function
                     [x],
                     [tf.float32],
@@ -150,8 +150,6 @@ if __name__ == '__main__':
                 hidden_1 = tf_leaky_relu(tf.add(tf.matmul(input, weights_0_1), bias_0_1))
                 hidden_2 = tf_leaky_relu(tf.add(tf.matmul(hidden_1, weights_1_2), bias_1_2))
                 predict = tf_leaky_relu(tf.matmul(hidden_2, weights_2_3))
-
-                
 
                 loss = mse(predict, expect)
 
