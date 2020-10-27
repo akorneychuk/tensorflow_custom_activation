@@ -1,15 +1,10 @@
-# tensorflow_custom_activation
-Project with custom activation function for TensorFlow multi-layer perceptron
+# Tensorflow Custom Activation Func
+There is a simple pure TensorFlow multi-layer perceptron with custom activation function and derivative for gradient descent
 
 **System information**
-- I have written custom activation function and derivative for that
 - MAC OS Catalina 10.15.7
 - Python v3.8.5
 - TensorFlow v2.3.1
-- Simple synchronous eager execution on pure TensorFlow gradient descendant flow
-
-**Standalone code to reproduce the issue**
-
 
 **Stacktrace** 
 `Traceback (most recent call last):
