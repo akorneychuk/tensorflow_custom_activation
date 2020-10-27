@@ -6,7 +6,8 @@ There is a simple pure TensorFlow multi-layer perceptron with custom activation 
 - Python v3.8.5
 - TensorFlow v2.3.1
 
-**Stacktrace** 
+**Stacktrace**
+
 `Traceback (most recent call last):
   File "/private/var/root/PycharmProjects/untitled_sec/venv/lib/python3.8/site-packages/tensorflow/python/eager/backprop.py", line 162, in _gradient_function
     return grad_fn(mock_op, *out_grads)
