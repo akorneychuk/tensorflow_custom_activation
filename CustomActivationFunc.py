@@ -141,13 +141,17 @@ if __name__ == '__main__':
                 t.watch(bias_1_2)
                 t.watch(weights_2_3)
 
+                # Does works as expected! :)
+                # hidden_1 = tf.nn.relu(tf.add(tf.matmul(input, weights_0_1), bias_0_1))
+                # hidden_2 = tf.nn.relu(tf.add(tf.matmul(hidden_1, weights_1_2), bias_1_2))
+                # predict = tf.nn.relu(tf.matmul(hidden_2, weights_2_3))
+                
+                # Does not works..:(
                 hidden_1 = tf_leaky_relu(tf.add(tf.matmul(input, weights_0_1), bias_0_1))
                 hidden_2 = tf_leaky_relu(tf.add(tf.matmul(hidden_1, weights_1_2), bias_1_2))
                 predict = tf_leaky_relu(tf.matmul(hidden_2, weights_2_3))
 
-                # hidden_1 = tf.nn.relu(tf.add(tf.matmul(input, weights_0_1), bias_0_1))
-                # hidden_2 = tf.nn.relu(tf.add(tf.matmul(hidden_1, weights_1_2), bias_1_2))
-                # predict = tf.nn.relu(tf.matmul(hidden_2, weights_2_3))
+                
 
                 loss = mse(predict, expect)
 
